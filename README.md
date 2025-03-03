@@ -35,3 +35,7 @@ Essas plataformas permitem testar e depurar códigos em C diretamente no navegad
 ---
 
 Com essas ferramentas, você estará pronto para implementar e testar os algoritmos de **Bubble Sort** e **Quick Sort** em C!
+
+# Bubble Sort:
+
+### Tempo de compilação com 1000 algoritmos: 0.3 segundos
