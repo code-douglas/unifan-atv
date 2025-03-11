@@ -2,16 +2,35 @@
 #include <stdlib.h>
 #include <time.h>
 
-void bubble_sort(int vetor[], int tam) {
-  for (int i = 0; i < tam; i++) {
-    for (int j = 0; j < tam - 1; j++) {
-      if (vetor[j] > vetor[j + 1]) {
-        int temp = vetor[j];
-        vetor[j] = vetor[j + 1];
-        vetor[j + 1] = temp;
-      }
-    }
+void quickSort(int vetor[], int tam) {
+  int i, j, grupo, troca;
+
+  if(tam < 2) {
+    return;
   }
+
+  grupo = vetor[tam / 2];
+
+  for(i = 0, j = tam - 1; ; i++, j--) {
+    while(vetor[i] < grupo) {
+      i++;
+    };
+
+    while(grupo < vetor[j]) {
+      j--;
+    };
+
+    if(i >= j) {
+      break;
+    }
+
+    troca = vetor[i];
+    vetor[i] = vetor[j];
+    vetor[j] = troca;
+  }
+
+  quickSort(vetor, i);
+  quickSort(vetor + i, tam - i);
 }
 
 int main() {
@@ -26,7 +45,7 @@ int main() {
   double tempo_execucao;
 
   inicio = clock();
-  bubble_sort(vetor, 1000);
+  quickSort(vetor, 1000);
   fim = clock();
 
   for (int i = 0; i < 1000; i++) {
