@@ -38,4 +38,8 @@ Com essas ferramentas, você estará pronto para implementar e testar os algorit
 
 # Bubble Sort:
 
-### Tempo de compilação com 1000 algoritmos: 0.3 segundos
+### Tempo de compilação com 1000 algoritmos: 3 segundos
+
+# Quick Sort:
+
+### Tempo de compilação com 1000 algoritmos: 7 segundos
